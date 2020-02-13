@@ -1,0 +1,7 @@
+for pos in record.x_pos_quotation.lines:
+  record.write({'order_line': [(0, False, {'product_id':pos.product_id.id,
+                                           'product_uom_qty': pos.qty,
+                                           'price_unit': pos.price_unit,
+                                           'name':pos.product_id.description_sale,
+                                           'quotation_description':pos.product_id.variant_description_sale,
+                                           })]})
